@@ -253,7 +253,9 @@ class F3PitchSlotsFixtures extends Fixture
  
         // Finaly we need to prepare the returning  array according to required output 
         for($i=0, $j=1; $j<count($arrayDateTimeTable); $i++, $j++){
-	
+    
+            if($arrayDateTimeTable[$i]->format("H:i:s")=="23:00:00") continue;
+
             $arrayDateTimeSlots [] = [
                 "starts" => $arrayDateTimeTable[$i],
                 "ends" => $arrayDateTimeTable[$j]

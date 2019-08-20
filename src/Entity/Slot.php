@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SlotRepository")
@@ -18,27 +19,38 @@ class Slot
 
     /**
      * @ORM\Column(type="datetimetz")
+     * @Assert\NotBlank
+     * @Assert\DateTime
+     * @var string A "Y-m-d\TH:i:sP" formatted value
      */
     private $starts;
 
     /**
      * @ORM\Column(type="datetimetz")
+     * @Assert\NotBlank
+     * @Assert\DateTime
+     * @var string A "Y-m-d\TH:i:sP" formatted value
      */
     private $ends;
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank
+     * @Assert\Type("float")
      */
     private $price;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Currency", inversedBy="slots")
      * @ORM\JoinColumn(nullable=false)
+     * @Assert\NotBlank
      */
     private $currency;
 
     /**
      * @ORM\Column(type="boolean")
+     * Assert\NotNull
+     * @Assert\Type("bool")
      */
     private $available;
 
