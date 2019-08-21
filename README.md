@@ -2,7 +2,8 @@
 
 This README.md file shows step by step how to install and run the Playfinder API REST.
 
-![Infrastructure diagram](public/ER-Diagram-2.png)
+![Database diagram](public/ER-Diagram-2.png)
+Database Entity Relationship Model
 
 
 ## Stack:
@@ -87,6 +88,8 @@ Once the app is installed we proceed to run migrations in order to create DB Sch
 ```
 # php bin/console doctrine:fixtures:load 
 ```
+If it's ok you will see:
+![Fixtures](public/fixtures-1.png)
 
 ## Running the server:
 
@@ -115,14 +118,21 @@ The applications provides all the endpoints required:
 
 - **GET http://localhost:8000/pitches** -> Get all Pitches from the database in JSON Format.
 
+![Postman GET Request 1](public/get-1.png)
+
 
 - **GET http://localhost:8000/pitches/{$id}** -> Get a Pitch by the given **$id**.
+
+![Postman GET Request 2](public/get-2.png)
 
 
 - **GET http://localhost:8000/pitches/{$id}/slots** -> Get all Slots by the given Pitch **$id**.
 
+![Postman GET Request 3](public/get-3.png)
 
 - **POST http://localhost:8000/pitches/{$id}/slots** -> Insert/update slots information for a given pitch **$id**.
+
+![Postman POST Request 1](public/post-1.png)
 
 
 ## Validations
@@ -135,7 +145,8 @@ Data input validations and bussines logic validations were implemented for the P
 - Valid currencies codes.
 - And so on.
 
-## 
+**Validations example:**
+![Validation](public/validation-1.png)
 
 ## DB Schema
 Model entities used
@@ -154,9 +165,7 @@ If you want to run tests:
 #  ./bin/phpunit 
 ```
 If everything goes well (as expected) you will see:
-```
-#  OK (10 tests, 20425 assertions) 
-```
+![Unit tests](public/tests.png)
 
 ## Improvements for Future versions:
 I would really love to Dockerize the application to increase its portability running as isolated services regardless of the the native host machine requirements.
