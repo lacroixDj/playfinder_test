@@ -58,8 +58,8 @@ We need to install Symfony and all the required packages using composer:
 The project's cache and logs directory in  **var/cache/** and **var/log/** must be writable by the web server. 
 
 ```
-chmod -R 775 var/cache/
-chmod -R 775 var/log/
+# chmod -R 775 var/cache/
+# chmod -R 775 var/log/
 ```
 
 For practical reasons we are using **SQLite**, so the database is  embeded inside the code  **var/playfinder_test.db**. So make sure to assign write permissions to that file. I thinks this is the most portable option.
