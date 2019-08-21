@@ -36,7 +36,7 @@ class Slot
     /**
      * @ORM\Column(type="float")
      * @Assert\NotBlank
-     * @Assert\Type("float")
+     * @Assert\PositiveOrZero
      */
     private $price;
 

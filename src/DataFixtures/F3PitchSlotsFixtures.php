@@ -89,6 +89,7 @@ class F3PitchSlotsFixtures extends Fixture
         
         $arr_europe_currencies = [$pound, $euro];
 
+        // Generate datetimes timetable
         $arrayDateTimeSlots = $this->createDateTimeSlots(); 
 
 

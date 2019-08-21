@@ -235,7 +235,7 @@ class PitchController extends AbstractController
         // Basic variables setup
         $upsertedSlots = 0;
 
-        $statusCode = Response::HTTP_OK;
+        $statusCode = Response::HTTP_CREATED;
 
         $arrayResponse = SELF::$metaResponseTpl;
         // ---
@@ -320,8 +320,6 @@ class PitchController extends AbstractController
                             $slot = new Slot();
                         }
                         
-                        
-                        
                         // Setting the attributes:
                         
                         $slot->setPitch($pitch);
@@ -359,7 +357,7 @@ class PitchController extends AbstractController
                 // --- Foreach end.
 
                 // flush data to DB if everything was fine
-                if($statusCode == Response::HTTP_OK) {
+                if($statusCode == Response::HTTP_CREATED ) {
 
                     $manager->flush();
 
@@ -489,7 +487,7 @@ class PitchController extends AbstractController
 
                 "price" => [
                     new Assert\NotBlank(),
-                    new Assert\Type(['type' => 'float']),
+                    new Assert\PositiveOrZero(),
                 ],
 
                 "currency" => [
