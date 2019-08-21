@@ -158,7 +158,7 @@ If everything goes well (as expected) you will see:
 #  OK (10 tests, 20425 assertions) 
 ```
 
-## Improvements and Future versions:
+## Improvements for Future versions:
 I would really love to Dockerize the application to increase its portability running as isolated services regardless of the the native host machine requirements.
 
 The idea is to orchestrate the app with **docker-compose** and run three services (containers) with NGNX as web server + PHP-fpm as fast cgi processor + MySQL as database.
