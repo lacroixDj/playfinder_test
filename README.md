@@ -170,12 +170,12 @@ If everything goes well (as expected) you will see:
 ## Improvements for Future versions:
 I would really love to Dockerize the application to increase its portability running as isolated services regardless of the the native host machine requirements.
 
-The idea is to orchestrate the app with **docker-compose** and run three services (containers) with NGNX as web server + PHP-fpm as fast cgi processor + MySQL as database.
+The idea is to orchestrate the app with **docker-compose** and run three services (containers) with **NGNX** as web server + **PHP-fpm** as fast cgi processor + **PostgreSQL** as database.
 
 Due time and deadline reasons (this is a technical test) this improvement will be considered for possible future versions
 
 ## Contact:
 
-If you have any question you can email me <jesus.farias@gmail.com>
+If you have any question you can reach me at <jesus.farias@gmail.com>
 
 **Thanks!**
