@@ -144,7 +144,9 @@ Model entities used
 
 
 ## Testing:
-Testing (mostly functional tests) were developed and included. If you want to run tests:
+Automated tests,  mostly functional tests, were developed and included, covering RW+ operations for each API Rest endpoint. 
+
+If you want to run tests:
 ```
 #  ./bin/phpunit 
 ```
