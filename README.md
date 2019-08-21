@@ -2,7 +2,7 @@
 
 This README.md file shows step by step how to install and run the Playfinder API REST.
 
-![Infrastructure diagram](public\ER-Diagram.png)
+![Infrastructure diagram](public/ER-Diagram.png)
 
 
 ## Stack:
