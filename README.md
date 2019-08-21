@@ -39,7 +39,7 @@ which are installed and enabled by default in most PHP 7 installations (there is
 - pdo
 - pdo_mysql (optional)
 
-## Cloning the repository from Bitbucket:
+## Cloning the repository from Github:
 
 ```
 # cd /path/to/your/web/document/root 
@@ -74,7 +74,7 @@ Once the app is installed we proceed to run migrations in order to create DB Sch
 # php bin/console doctrine:database:create 
 ```
 
-**Making migrations:** This is only necesary once, or in case you want to switch your RDBMS from SQLite to MySQL o viceversa. 
+**Making migrations:** This is only necesary if there is not any previous migration file generated under src/Migrations folder, or in case you want to switch your RDBMS from SQLite to MySQL o viceversa you should create the migrations file again. 
 ```
 # php bin/console make:migration 
 ```
