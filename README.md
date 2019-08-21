@@ -13,7 +13,7 @@ This README.md file shows step by step how to install and run the Playfinder API
 Server requirements in order to get the application running.
 
 **Note:** The following requirements are Symfony framework requirements such the PHP extensions
-which are installed and enabled by default in most PHP 7 installations. (there is nothing to worry about)
+which are installed and enabled by default in most PHP 7 installations (there is nothing to worry about).
 
 - PHP >=7.1.3
 - Composer
@@ -60,7 +60,7 @@ Then we need to install Symfony and all the required packages using composer:
 
 For practical reasons we are using **SQLite**, so the database is  embeded inside the code  **var/playfinder_test.db**. So make sure to assign write permissions to that file. I thinks this is the most portable option.
 
-If you prefer to use **MySQL** edit .env file, comment the SQLite line entry, then uncomment the MySQL line entry and place your variables (user, host and pass) in the connection string.
+If you prefer to use **MySQL** you will have to edit **.env** file, comment the SQLite line entry, after that uncomment the MySQL line entry and replace your connection params (user, host and pass) in the connection string.
 
 Once the app is installed we proceed to run migrations in order to create DB Schema and tables and finally generate sample data by using fixtures. 
 
